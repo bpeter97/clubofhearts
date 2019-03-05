@@ -1,8 +1,6 @@
 /* Tiny reset thingy */
 body,
 html {
-	margin: 0;
-	padding: 0;
 	scroll-behavior: smooth;
 	background: black;
 }
@@ -46,6 +44,12 @@ font-family: 'Yellowtail', cursive;
 
 .gloriaFont {
 	font-family: "Great Vibes", cursive;
+}
+
+.title {
+	font-size: 56px;
+	font-family: "BebasNeue";
+	color: white;
 }
 
 @media (max-width: 576px) {
@@ -119,8 +123,6 @@ font-family: 'Yellowtail', cursive;
 	background-attachment: fixed;
 	background-position: center center;
 	background-size: cover;
-	transform: translateZ(1px) scale(1.05);
-	margin-bottom: 15px;
 }
 
 .landing {
@@ -131,7 +133,6 @@ font-family: 'Yellowtail', cursive;
 	color: white;
 	text-shadow: 0 0 5px #000;
 	overflow: hidden;
-	position: relative;
 }
 
 .landing .d-arrow.visible {
@@ -142,7 +143,7 @@ font-family: 'Yellowtail', cursive;
 	text-align: center;
 	color: white;
 
-	bottom: -100%;
+	bottom: -50%;
 	display: block;
 	left: 50%;
 	margin-left: -50px;
@@ -205,31 +206,31 @@ font-family: 'Yellowtail', cursive;
 }
 
 /* news carousel */
-.carousel-inner .carousel-item.active,
-.carousel-inner .carousel-item-next,
-.carousel-inner .carousel-item-prev {
+#news-carousel .carousel-inner .carousel-item.active,
+#news-carousel .carousel-inner .carousel-item-next,
+#news-carousel .carousel-inner .carousel-item-prev {
 	display: flex;
 }
 
-.carousel-control-prev .icon {
+#news-carousel .carousel-control-prev .icon {
 	font-size: 56px;
 }
-.carousel-control-next .icon {
+#news-carousel .carousel-control-next .icon {
 	font-size: 56px;
 }
 
-.carousel-inner .carousel-item-right.active,
-.carousel-inner .carousel-item-next {
+#news-carousel .carousel-inner .carousel-item-right.active,
+#news-carousel .carousel-inner .carousel-item-next {
 	transform: translateX(25%);
 }
 
-.carousel-inner .carousel-item-left.active,
-.carousel-inner .carousel-item-prev {
+#news-carousel .carousel-inner .carousel-item-left.active,
+#news-carousel .carousel-inner .carousel-item-prev {
 	transform: translateX(-25%);
 }
 
-.carousel-inner .carousel-item-right,
-.carousel-inner .carousel-item-left {
+#news-carousel .carousel-inner .carousel-item-right,
+#news-carousel .carousel-inner .carousel-item-left {
 	transform: translateX(0);
 }
 
@@ -287,11 +288,43 @@ font-family: 'Yellowtail', cursive;
 }
 
 #about-us i {
-	font-size: 72px;
+	font-size: 120px;
 	color: #e0e0e0;
 }
 
-#about-us .row {
-	margin-top: auto;
-	margin-bottom: auto;
+#about-us .service-title {
+	font-size: 32px;
+	font-family: "Yellowtail", cursive;
+}
+
+#about-us .service-description {
+	font-family: "Overpass";
+}
+
+#gallery {
+	color: white;
+	background-color: #1b1b1b;
+}
+
+#quotes {
+	color: white;
+	height: 100%;
+}
+
+#quotes .container {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+#quotes #quote-carousel .fas {
+	font-size: 100px;
+	opacity: 0.2;
+}
+
+#quotes #quote-carousel .quote-text {
+	font-family: "Overpass";
+}
+
+#quotes #quote-carousel .gloriaFont {
+	font-size: 42px;
 }
