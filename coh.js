@@ -27,22 +27,21 @@ $(window).scroll(function() {
 	}
 });
 
-// var t, s;
-// (s = document.querySelector(".parallax")),
-// 	window.addEventListener(
-// 		"DOMContentLoaded",
-// 		function a() {
-// 			var e, n;
-// 			window.scrollX,
-// 				(t = window.scrollY),
-// 				(e = 0),
-// 				(n = 0.02 * t),
-// 				(s.style.transform = "translate3d(" + e + ", " + n + "px, 0)"),
-// 				// (s.style.transform = "translateY(" + n + "px"),
-// 				requestAnimationFrame(a);
-// 		},
-// 		!1
-// 	);
+$(document).ready(function(){
+  $(".fancybox").fancybox({
+        openEffect: "none",
+        closeEffect: "none"
+    });
+    
+    $(".zoom").hover(function(){
+		
+		$(this).addClass('transition');
+	}, function(){
+        
+		$(this).removeClass('transition');
+	});
+});
+    
 
 // News carousel
 $("#news-carousel").carousel({
@@ -50,27 +49,4 @@ $("#news-carousel").carousel({
 });
 $("#quote-carousel").carousel({
 	interval: 10000
-});
-
-$("#news-carousel .carousel-item").each(function() {
-	var next = $(this).next();
-	if (!next.length) {
-		next = $(this).siblings(":first");
-	}
-	next
-		.children(":first-child")
-		.clone()
-		.appendTo($(this));
-
-	for (var i = 0; i < 2; i++) {
-		next = next.next();
-		if (!next.length) {
-			next = $(this).siblings(":first");
-		}
-
-		next
-			.children(":first-child")
-			.clone()
-			.appendTo($(this));
-	}
 });
